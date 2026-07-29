@@ -16,5 +16,23 @@
         "source": "Demo Search",
         "url": "https://example.com/data-entry",
         "score": 85
+    },
+    {
+        "title": "Customer Support Specialist 01:35:28",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:35:28",
+        "score": 70
+    },
+    {
+        "title": "Customer Support Specialist 01:40:24",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:40:24",
+        "score": 70
     }
 ]

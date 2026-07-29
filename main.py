@@ -15,7 +15,9 @@ def main():
     config = load_config()
 
     manager = JobManager()
+
     searcher = DemoSearcher()
+
 
     agent = JobHunterAgent(
         config=config,
@@ -23,7 +25,9 @@ def main():
         searcher=searcher
     )
 
+
     scheduler = AgentScheduler(agent)
+
 
     print("=" * 50)
     print("🤖 Job Hunter AI")
