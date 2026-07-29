@@ -3,6 +3,7 @@ from app.job_manager import JobManager
 from app.search.demo_searcher import DemoSearcher
 from app.agent import JobHunterAgent
 from app.logger import setup_logger
+from app.scheduler import AgentScheduler
 
 
 def main():
@@ -22,19 +23,13 @@ def main():
         searcher=searcher
     )
 
+    scheduler = AgentScheduler(agent)
+
     print("=" * 50)
     print("🤖 Job Hunter AI")
     print("=" * 50)
 
-    print("\n🔎 Agentul caută joburi...\n")
-
-    added = agent.run()
-
-    print(f"\n✅ Joburi noi adăugate: {added}")
-
-    logger.info(
-        f"Agent finalizat. Joburi noi: {added}"
-    )
+    scheduler.start()
 
 
 if __name__ == "__main__":
