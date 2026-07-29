@@ -1,21 +1,49 @@
 {
-  "keywords": [
-    "Customer Support",
-    "Chat Support",
-    "Data Entry",
-    "Operator introducere date",
-    "Lucrator comercial",
-    "Consultant vanzari cosmetice",
-    "Tabacherie"
-  ],
-  "locations": [
-    "Bucuresti",
-    "Remote"
-  ],
-  "salary_min": 4000,
-  "employment": [
-    "Full-time",
-    "Program flexibil"
-  ],
-  "language": "Romana"
+    "salary_min": 3000,
+
+    "locations": [
+        "Bucuresti",
+        "București",
+        "Ilfov",
+        "Remote",
+        "Romania"
+    ],
+
+    "keywords": [
+        "customer support",
+        "customer service",
+        "customer care",
+        "chat support",
+        "chat agent",
+        "operator chat",
+        "suport clienti",
+        "suport clienți",
+
+        "data entry",
+        "operator date",
+        "introducere date",
+        "back office",
+
+        "call center",
+        "cc",
+        "operator call center",
+
+        "consultant vanzari",
+        "consultant vânzări",
+        "lucrator comercial",
+        "lucrător comercial",
+        "magazin",
+        "mall",
+
+        "beauty advisor",
+        "cosmetice",
+        "machiaj",
+        "makeup",
+        "parfum",
+        "parfumerie",
+
+        "tutungerie",
+        "vanzator",
+        "vânzător"
+    ]
 }

@@ -34,5 +34,59 @@
         "source": "Demo Search",
         "url": "https://example.com/customer-support/01:40:24",
         "score": 70
+    },
+    {
+        "title": "Customer Support Specialist 01:46:45",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:46:45",
+        "score": 100
+    },
+    {
+        "title": "Customer Support Specialist 01:52:02",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:52:02",
+        "score": 80
+    },
+    {
+        "title": "Customer Support Specialist 01:52:45",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:52:45",
+        "score": 80
+    },
+    {
+        "title": "Customer Support Specialist 01:53:45",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/01:53:45",
+        "score": 80
+    },
+    {
+        "title": "Customer Support Specialist 02:01:13",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/02:01:13",
+        "score": 80
+    },
+    {
+        "title": "Customer Support Specialist 02:07:51",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/02:07:51",
+        "score": 80
     }
 ]
