@@ -1,8 +1,7 @@
 from app.config import load_config
 from app.job_manager import JobManager
-from app.filter import JobFilter
-from app.scoring import JobScorer
 from app.search.demo_searcher import DemoSearcher
+from app.agent import JobHunterAgent
 from app.logger import setup_logger
 
 
@@ -14,67 +13,28 @@ def main():
 
     config = load_config()
 
+    manager = JobManager()
+    searcher = DemoSearcher()
+
+    agent = JobHunterAgent(
+        config=config,
+        manager=manager,
+        searcher=searcher
+    )
+
     print("=" * 50)
     print("🤖 Job Hunter AI")
     print("=" * 50)
 
-    manager = JobManager()
-    job_filter = JobFilter(config)
-    scorer = JobScorer(config)
+    print("\n🔎 Agentul caută joburi...\n")
 
-    searcher = DemoSearcher()
+    added = agent.run()
 
-    logger.info("Cautare joburi inceputa")
-
-    print("\n🔎 Caut joburi...\n")
-
-    found_jobs = searcher.search()
-
-    logger.info(f"Gasite {len(found_jobs)} joburi")
-
-    print(f"Au fost găsite {len(found_jobs)} joburi.")
-
-    print("\n🧠 Analizez potrivirea...\n")
-
-    accepted = 0
-    rejected = 0
-    duplicates = 0
-
-    for job in found_jobs:
-
-        job.score = scorer.calculate(job)
-
-        print(f"{job.title} → Scor AI: {job.score}/100")
-
-        if job_filter.is_valid(job):
-
-            if manager.add_job(job):
-                print("✅ Adăugat\n")
-                accepted += 1
-                logger.info(f"Job adaugat: {job.title}")
-
-            else:
-                duplicates += 1
-                logger.info(f"Duplicat ignorat: {job.title}")
-
-        else:
-            print("❌ Respins\n")
-            rejected += 1
-            logger.info(f"Job respins: {job.title}")
-
-
-    manager.list_jobs()
-
-    manager.save_jobs()
+    print(f"\n✅ Joburi noi adăugate: {added}")
 
     logger.info(
-        f"Finalizare: acceptate={accepted}, respinse={rejected}, duplicate={duplicates}"
+        f"Agent finalizat. Joburi noi: {added}"
     )
-
-    print("\n📊 Rezumat:")
-    print(f"Acceptate: {accepted}")
-    print(f"Respinse: {rejected}")
-    print(f"Duplicate: {duplicates}")
 
 
 if __name__ == "__main__":
