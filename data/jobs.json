@@ -88,5 +88,68 @@
         "source": "Demo Search",
         "url": "https://example.com/customer-support/02:07:51",
         "score": 80
+    },
+    {
+        "title": "Customer Support Specialist 02:26:37",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/02:26:37",
+        "score": 80
+    },
+    {
+        "title": "Customer Support Specialist",
+        "company": "Romania Company",
+        "location": "Bucuresti",
+        "salary": "4500 lei",
+        "source": "Romania Search",
+        "url": "https://example.com/customer-support",
+        "score": 80
+    },
+    {
+        "title": "Operator introducere date",
+        "company": "Office Solutions",
+        "location": "Bucuresti",
+        "salary": "3800 lei",
+        "source": "Romania Search",
+        "url": "https://example.com/data-entry",
+        "score": 30
+    },
+    {
+        "title": "Beauty Advisor Cosmetice",
+        "company": "Beauty Store",
+        "location": "Mega Mall Bucuresti",
+        "salary": "3500 lei",
+        "source": "Romania Search",
+        "url": "https://example.com/beauty",
+        "score": 55
+    },
+    {
+        "title": "Romanian Chat Support Agent Remote",
+        "company": "Remote Global",
+        "location": "Remote",
+        "salary": "6000 lei",
+        "source": "Remote Search",
+        "url": "https://example.com/chat-support",
+        "score": 100
+    },
+    {
+        "title": "Romanian Data Entry Specialist Remote",
+        "company": "Remote Data Company",
+        "location": "Remote",
+        "salary": "5000 lei",
+        "source": "Remote Search",
+        "url": "https://example.com/data-entry",
+        "score": 100
+    },
+    {
+        "title": "Customer Support Specialist 03:09:42",
+        "company": "Demo Company",
+        "location": "București",
+        "salary": "4800 lei",
+        "source": "Demo Search",
+        "url": "https://example.com/customer-support/03:09:42",
+        "score": 80
     }
 ]

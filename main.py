@@ -1,6 +1,6 @@
 from app.config import load_config
 from app.job_manager import JobManager
-from app.search.demo_searcher import DemoSearcher
+from app.search.search_manager import SearchManager
 from app.agent import JobHunterAgent
 from app.logger import setup_logger
 from app.scheduler import AgentScheduler
@@ -16,7 +16,7 @@ def main():
 
     manager = JobManager()
 
-    searcher = DemoSearcher()
+    searcher = SearchManager()
 
 
     agent = JobHunterAgent(
