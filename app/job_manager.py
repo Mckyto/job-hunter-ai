@@ -3,17 +3,15 @@ from pathlib import Path
 
 from app.job import Job
 from app.duplicate_checker import DuplicateChecker
-from app.notifications.telegram_bot import TelegramBot
 
 
 class JobManager:
 
     def __init__(self):
+
         self.jobs = []
         self.file = Path("data/jobs.json")
         self.existing_jobs = self.load_jobs()
-
-        self.telegram = TelegramBot()
 
 
     def load_jobs(self):
@@ -37,7 +35,6 @@ class JobManager:
         self.jobs.append(job)
 
 
-        # actualizam memoria pentru verificari ulterioare
         self.existing_jobs.append({
             "title": job.title,
             "company": job.company,
@@ -47,26 +44,6 @@ class JobManager:
             "url": job.url,
             "score": job.score
         })
-
-
-        mesaj = (
-            f"🎯 Job nou găsit!\n\n"
-            f"💼 {job.title}\n"
-            f"🏢 {job.company}\n"
-            f"📍 {job.location}\n"
-            f"💰 {job.salary}\n"
-            f"⭐ Scor: {job.score}\n\n"
-            f"🔗 {job.url}"
-        )
-
-
-        rezultat = self.telegram.send_message(mesaj)
-
-
-        if rezultat:
-            print("📲 Notificare Telegram trimisă.")
-        else:
-            print("❌ Telegram nu a trimis mesajul.")
 
 
         return True
@@ -79,6 +56,7 @@ class JobManager:
 
 
         with open(self.file, "w", encoding="utf-8") as file:
+
             json.dump(
                 self.existing_jobs,
                 file,
@@ -93,7 +71,9 @@ class JobManager:
 
     def list_jobs(self):
 
-        print(f"\nAu fost găsite {len(self.jobs)} joburi noi:\n")
+        print(
+            f"\nAu fost găsite {len(self.jobs)} joburi noi:\n"
+        )
 
 
         for index, job in enumerate(self.jobs, start=1):
