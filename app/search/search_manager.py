@@ -1,19 +1,37 @@
-from app.search.demo_searcher import DemoSearcher
 from app.search.romania_searcher import RomaniaSearcher
 from app.search.remote_searcher import RemoteSearcher
+from app.search.demo_searcher import DemoSearcher
 
 
 class SearchManager:
 
-    def __init__(self):
+    def __init__(self, config):
 
-        self.searchers = [
+        self.config = config
 
-            RomaniaSearcher(),
-            RemoteSearcher(),
-            DemoSearcher()
+        self.searchers = []
 
-        ]
+
+        sources = self.config.get("sources", {})
+
+
+        if sources.get("romania", False):
+            self.searchers.append(
+                RomaniaSearcher()
+            )
+
+
+        if sources.get("remote", False):
+            self.searchers.append(
+                RemoteSearcher()
+            )
+
+
+        if sources.get("demo", False):
+            self.searchers.append(
+                DemoSearcher()
+            )
+
 
 
     def search(self):

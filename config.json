@@ -1,6 +1,18 @@
 {
     "salary_min": 3000,
 
+    "min_score": 70,
+
+    "notification_limit": 10,
+
+    "remote_allowed": true,
+
+    "sources": {
+        "romania": true,
+        "remote": true,
+        "demo": false
+    },
+
     "locations": [
         "Bucuresti",
         "București",
@@ -10,6 +22,7 @@
     ],
 
     "keywords": [
+
         "customer support",
         "customer service",
         "customer care",
@@ -43,6 +56,7 @@
         "parfumerie",
 
         "tutungerie",
+        "tabacherie",
         "vanzator",
         "vânzător"
     ]

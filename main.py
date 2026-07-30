@@ -16,7 +16,7 @@ def main():
 
     manager = JobManager()
 
-    searcher = SearchManager()
+    searcher = SearchManager(config)
 
 
     agent = JobHunterAgent(
