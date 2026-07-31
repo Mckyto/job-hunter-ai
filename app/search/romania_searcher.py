@@ -12,7 +12,7 @@ class RomaniaSearcher(BaseSearcher):
                 title="Customer Support Specialist",
                 company="Romania Company",
                 location="Bucuresti",
-                salary="4500 lei",
+                salary="5000 lei",
                 source="Romania Search",
                 url="https://example.com/customer-support",
                 score=0

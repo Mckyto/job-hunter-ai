@@ -14,6 +14,7 @@ class JobManager:
         self.existing_jobs = self.load_jobs()
 
 
+
     def load_jobs(self):
 
         if not self.file.exists():
@@ -23,19 +24,55 @@ class JobManager:
             return json.load(file)
 
 
+
     def add_job(self, job: Job):
 
         checker = DuplicateChecker(self.existing_jobs)
 
-        if checker.is_duplicate(job):
-            print(f"⚠️ Duplicat ignorat: {job.title}")
-            return False
+        existing = checker.find_existing(job)
 
+
+        # Job deja existent
+        if existing:
+
+            if checker.has_changes(job):
+
+                print(
+                    f"🔄 Job actualizat: {job.title}"
+                )
+
+
+                existing.update({
+                    "salary": job.salary,
+                    "url": job.url,
+                    "score": job.score,
+                    "location": job.location,
+                    "source": job.source
+                })
+
+
+                self.jobs.append(job)
+
+                return True
+
+
+            else:
+
+                print(
+                    f"⚠️ Duplicat ignorat: {job.title}"
+                )
+
+                return False
+
+
+
+        # Job nou
 
         self.jobs.append(job)
 
 
         self.existing_jobs.append({
+
             "title": job.title,
             "company": job.company,
             "location": job.location,
@@ -43,6 +80,7 @@ class JobManager:
             "source": job.source,
             "url": job.url,
             "score": job.score
+
         })
 
 
