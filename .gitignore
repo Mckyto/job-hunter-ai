@@ -1,4 +1,32 @@
+# Python
 __pycache__/
-*.pyc
-logs/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
 .env
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# Local runtime data
+data/jobs.json
