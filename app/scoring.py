@@ -1,88 +1,27 @@
 class JobScorer:
-
-    def __init__(self, config):
+    """
+    Calculează scorul de bază pentru un job pe baza salariului și a criteriilor.
+    """
+    def __init__(self, config=None):
         self.config = config
 
+    def calculate(self, job) -> int:
+        salary_raw = getattr(job, 'salary', '0')
+        
+        # Extragem cifrele în siguranță, prevenind erorile dacă șirul este gol sau "Nespecificat"
+        digits = "".join(filter(str.isdigit, str(salary_raw)))
+        salary = int(digits) if digits else 0
 
-    def calculate(self, job):
+        # Scor de bază orientativ
+        base_score = 50
+        
+        if salary > 6000:
+            base_score = 85
+        elif salary > 4000:
+            base_score = 70
+        elif salary > 0:
+            base_score = 60
+        else:
+            base_score = 50  # Valoare standard dacă salariul nu este specificat
 
-        score = 0
-
-        title = job.title.lower()
-        location = job.location.lower()
-
-
-        # Prioritate mare: joburi dorite
-        high_priority = [
-            "customer support",
-            "customer service",
-            "chat support",
-            "chat agent",
-            "data entry",
-            "operator date",
-            "back office"
-        ]
-
-
-        # Prioritate medie
-        medium_priority = [
-            "call center",
-            "operator call center",
-            "suport clienti",
-            "consultant vanzari",
-            "lucrator comercial"
-        ]
-
-
-        # Domenii bonus
-        bonus_keywords = [
-            "beauty",
-            "cosmetice",
-            "machiaj",
-            "makeup",
-            "mall",
-            "magazin",
-            "tutungerie"
-        ]
-
-
-        for keyword in high_priority:
-
-            if keyword in title:
-                score += 50
-                break
-
-
-        for keyword in medium_priority:
-
-            if keyword in title:
-                score += 35
-                break
-
-
-        for keyword in bonus_keywords:
-
-            if keyword in title:
-                score += 25
-                break
-
-
-        # Remote este un avantaj
-        if "remote" in location:
-            score += 20
-
-
-        # Salariu
-        if job.salary:
-
-            salary = int(
-                "".join(
-                    filter(str.isdigit, job.salary)
-                )
-            )
-
-            if salary >= self.config["salary_min"]:
-                score += 30
-
-
-        return min(score, 100)
+        return base_score

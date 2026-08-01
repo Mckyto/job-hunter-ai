@@ -1,0 +1,132 @@
+Folder PATH listing
+Volume serial number is 00000084 AEF4:DECB
+C:.
+¦   .env
+¦   .gitignore
+¦   config.json
+¦   main.py
+¦   README.md
+¦   requirements.txt
+¦   test_telegram.py
+¦   tree.txt
+¦   
++---app
+¦   ¦   agent.py
+¦   ¦   config.py
+¦   ¦   duplicate_checker.py
+¦   ¦   filter.py
+¦   ¦   job.py
+¦   ¦   job_manager.py
+¦   ¦   logger.py
+¦   ¦   scheduler.py
+¦   ¦   scoring.py
+¦   ¦   __init__.py
+¦   ¦   
+¦   +---ai
+¦   ¦   ¦   cover_letter.py
+¦   ¦   ¦   job_scorer.py
+¦   ¦   ¦   job_validator.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           cover_letter.cpython-314.pyc
+¦   ¦           job_scorer.cpython-314.pyc
+¦   ¦           job_validator.cpython-314.pyc
+¦   ¦           __init__.cpython-314.pyc
+¦   ¦           
+¦   +---apply
+¦   ¦   ¦   apply_manager.py
+¦   ¦   ¦   cv_manager.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           apply_manager.cpython-314.pyc
+¦   ¦           cv_manager.cpython-314.pyc
+¦   ¦           __init__.cpython-314.pyc
+¦   ¦           
+¦   +---notifications
+¦   ¦   ¦   telegram_bot.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           telegram_bot.cpython-314.pyc
+¦   ¦           
+¦   +---search
+¦   ¦   ¦   api_searcher.py
+¦   ¦   ¦   base_searcher.py
+¦   ¦   ¦   demo_searcher.py
+¦   ¦   ¦   remoteok_searcher.py
+¦   ¦   ¦   remote_searcher.py
+¦   ¦   ¦   remotive_searcher.py
+¦   ¦   ¦   romania_searcher.py
+¦   ¦   ¦   search_manager.py
+¦   ¦   ¦   __init__.py
+¦   ¦   ¦   
+¦   ¦   +---__pycache__
+¦   ¦           base_searcher.cpython-314.pyc
+¦   ¦           demo_searcher.cpython-314.pyc
+¦   ¦           remoteok_searcher.cpython-314.pyc
+¦   ¦           remote_searcher.cpython-314.pyc
+¦   ¦           remotive_searcher.cpython-314.pyc
+¦   ¦           romania_searcher.cpython-314.pyc
+¦   ¦           search_manager.cpython-314.pyc
+¦   ¦           __init__.cpython-314.pyc
+¦   ¦           
+¦   +---utils
+¦   ¦       __init__.py
+¦   ¦       
+¦   +---__pycache__
+¦           agent.cpython-314.pyc
+¦           config.cpython-314.pyc
+¦           duplicate_checker.cpython-314.pyc
+¦           filter.cpython-314.pyc
+¦           job.cpython-314.pyc
+¦           job_manager.cpython-314.pyc
+¦           logger.cpython-314.pyc
+¦           scheduler.cpython-314.pyc
+¦           scoring.cpython-314.pyc
+¦           __init__.cpython-314.pyc
+¦           
++---applications
+¦   +---Beauty Store_Beauty Advisor Cosmetice
+¦   ¦       CoverLetter.txt
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Concentrix_Customer Support Specialist
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Office Solutions_Operator introducere date
+¦   ¦       CoverLetter.txt
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Remote Data Company_Romanian Data Entry Specialist Remote
+¦   ¦       CoverLetter.txt
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Remote Global_Romanian Chat Support Agent Remote
+¦   ¦       CoverLetter.txt
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Romania Company_Customer Support Specialist
+¦   ¦       CoverLetter.txt
+¦   ¦       CV.pdf
+¦   ¦       job.json
+¦   ¦       
+¦   +---Test Company_AI Customer Support Specialist
+¦           CoverLetter.txt
+¦           CV.pdf
+¦           job.json
+¦           
++---cv
+¦       CV.pdf
+¦       
++---data
+¦       jobs.json
+¦       
++---logs
+        job_hunter.log
+        

@@ -1,63 +1,63 @@
 {
-    "salary_min": 3000,
+  "salary_min": 3500,
 
-    "min_score": 70,
+  "remote_only": false,
 
-    "notification_limit": 10,
+  "locations": [
+    "Romania",
+    "Remote",
+    "Hybrid"
+  ],
 
-    "remote_allowed": true,
+  "keywords": [
+    "customer support",
+    "call center",
+    "chat support",
+    "back office",
+    "data entry",
+    "content moderator",
+    "ai trainer",
+    "ai evaluator",
+    "social media moderator",
+    "virtual assistant"
+  ],
 
-    "sources": {
-        "romania": true,
-        "remote": true,
-        "demo": false
-    },
+  "candidate_profile": {
+    "country": "Romania",
 
-    "locations": [
-        "Bucuresti",
-        "București",
-        "Ilfov",
-        "Remote",
-        "Romania"
+    "languages": [
+      "Romanian",
+      "English"
     ],
 
-    "keywords": [
+    "preferred_jobs": [
+      "Customer Support",
+      "Call Center",
+      "Chat Support",
+      "Back Office",
+      "Data Entry",
+      "Content Moderator",
+      "AI Trainer",
+      "AI Evaluator",
+      "Social Media Moderator",
+      "Virtual Assistant"
+    ],
 
-        "customer support",
-        "customer service",
-        "customer care",
-        "chat support",
-        "chat agent",
-        "operator chat",
-        "suport clienti",
-        "suport clienți",
+    "work_mode": [
+      "Remote",
+      "Hybrid"
+    ],
 
-        "data entry",
-        "operator date",
-        "introducere date",
-        "back office",
+    "avoid_jobs": [
+      "Developer",
+      "Programmer",
+      "Engineer",
+      "Manager",
+      "Sales aggressive"
+    ],
 
-        "call center",
-        "cc",
-        "operator call center",
+    "minimum_salary": 3500,
 
-        "consultant vanzari",
-        "consultant vânzări",
-        "lucrator comercial",
-        "lucrător comercial",
-        "magazin",
-        "mall",
-
-        "beauty advisor",
-        "cosmetice",
-        "machiaj",
-        "makeup",
-        "parfum",
-        "parfumerie",
-
-        "tutungerie",
-        "tabacherie",
-        "vanzator",
-        "vânzător"
-    ]
+    "minimum_ai_score": 75
+  }
 }

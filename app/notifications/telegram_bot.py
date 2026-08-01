@@ -10,7 +10,7 @@ class TelegramBot:
 
     def __init__(self):
 
-        self.token = os.getenv("TELEGRAM_TOKEN")
+        self.token = os.getenv("TELEGRAM_BOT_TOKEN")
         self.chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
 
