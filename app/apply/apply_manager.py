@@ -1,3 +1,4 @@
+import os
 import re
 from pathlib import Path
 
@@ -8,6 +9,10 @@ class ApplyManager:
     def __init__(self, base_dir="applications"):
         self.base_dir = Path(base_dir)
         self.base_dir.mkdir(exist_ok=True)
+        
+        # Preluare automată din variabilele de mediu setate pe Render (cloud)
+        self.TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+        self.TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
 
     def sanitize_name(self, name) -> str:
         r"""
