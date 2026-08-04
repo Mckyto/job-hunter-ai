@@ -2,7 +2,7 @@ name: Job Hunter AI Free
 
 on:
   schedule:
-    - cron: '*/15 * * * *' # Rulează automat la fiecare 30 de minute
+    - cron: '*/5 * * * *' # Rulează automat la fiecare 30 de minute
   workflow_dispatch: 
 
 jobs:
