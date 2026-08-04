@@ -1,4 +1,5 @@
-python-dotenv
+schedule
 requests
 beautifulsoup4
-schedule
+pandas
+streamlit
