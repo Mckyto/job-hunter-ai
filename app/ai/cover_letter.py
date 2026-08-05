@@ -24,11 +24,10 @@ detalii despre experiența mea.
 Vă mulțumesc pentru timpul acordat.
 
 Cu stimă,
-Candidat Job Hunter AI
+Gabriela Usurelu
 
 Generat automat: {date}
 """
-
 
     def generate(self, job):
 
